@@ -1,16 +1,17 @@
 @import "common-imports/variables.scss";
 
-.sampleFooterBar {
+.appFooter {
+  padding: 15px;
   background: $black;
-  padding: 19px 20px;
-  p {
-    color: $white;
-    margin: 0;
-    line-height: 20px;
+  color: $white;
+  .haloIcon {
+    width: 28px;
+    float: left;
+    margin-right: 10px;
   }
-}
-@media only screen and (min-width: 1200px) {
-  .sampleFooterBar {
-    padding: 20px;
+  .text {
+    font-size: 1.2rem;
+    width: calc(100% - 60px);
+    float: left;
   }
 }

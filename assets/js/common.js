@@ -18,7 +18,7 @@ ThisApp.prototype.fetchThisJavascriptFile = function(scriptSrc, scriptId, callba
     else {
       var s = document.createElement("script");
       var h = document.getElementsByTagName("head")[0];
-      scriptSrc = scriptSrc + serveFileVer;
+      scriptSrc = scriptSrc;
       s.setAttribute("type", "text/javascript");
       s.setAttribute("src", scriptSrc);
       s.setAttribute("id", scriptId);
@@ -39,7 +39,7 @@ ThisApp.prototype.fetchThisJavascriptFile = function(scriptSrc, scriptId, callba
 };
 /* load css files on the fly */
 ThisApp.prototype.loadDeferredCSS = function(stylesLinkUrl, executeNextFunction, argsForFunc) {
-  var cssLink = stylesLinkUrl + serveFileVer;
+  var cssLink = stylesLinkUrl;
   var linkTag = document.createElement("link");
   var documentHeadTag = document.getElementsByTagName("head")[0];
   var baseUrl;

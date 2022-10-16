@@ -4,13 +4,40 @@ bodyClass: homePage
 bodyId: homePage
 jsfile: "home/index"
 ---
-<!--jumbotron section starts here-->
-<div class="jumbotronSection positionRelative" id="jumbotronSection">
-  <div class="posContainer text-center">
-    <img src="/assets/icons/app-loader.gif" class="img-responsive center-block" alt="Jekyll Arabica
-    Boilerplate" title="Jekyll Arabica Boilerplate"/>
-    <h1>{{ site.title }}</h1>
-    <p>Get Started // Get Coding</p>
+<div class="main">
+  <!-- currency input form -->
+  <form class="form" id="currencyForm">
+    <div class="form-group positionRelative">
+      <label for="fromCurrency">From*</label>
+      <select class="form-control" id="fromCurrency">
+        <option value="">-- Select Currency --</option>
+      </select>
+      <div class="error">Please Select Currency</div>
+    </div>
+    <div class="form-group positionRelative">
+      <label for="toCurrency">To*</label>
+      <select class="form-control" id="toCurrency">
+        <option value="">-- Select Currency --</option>
+      </select>
+      <div class="error">Please Select Currency</div>
+    </div>
+    <div class="form-group positionRelative value">
+      <label for="currencyAmount">Value*</label>
+      <input type="number" class="form-control" id="currencyAmount" name="currencyAmount"/>
+      <span class="fromCurrencyCode hide">INR</span>
+      <div class="error">Please Enter Amount</div>
+    </div>
+    <button class="btn btn-default" type="submit" id="submitButton">
+      <span class="text">Submit</span>
+      <img src="assets/icons/ani-loader-ffffff.gif"
+      class="img-responsive center-block loaderIcon" alt="Processing..."
+      title="Processing..."/>
+    </button>
+  </form>
+  <!-- result section -->
+  <div class="form-group positionRelative result" id="resultSection">
+    <label for="currencyAmount">Conversion Result</label>
+    <input type="number" class="form-control" id="resultAmount" disabled/>
+    <span class="resultCurrencyCode hide">INR</span>
   </div>
 </div>
-<!--jumbotron section ends here-->

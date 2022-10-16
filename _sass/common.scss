@@ -4,19 +4,19 @@
 
   This file imports bootstrap 3.x version into it. You can now
   import this particular file into a css file required to handle
-  per page. 
+  per page.
 */
 @import "common-imports/variables.scss";
+@import "app-font.scss";
 @import "vendor-components/bootstrap/stylesheets/bootstrap-sprockets";
-@import "vendor-components/bootstrap/stylesheets/_bootstrap"; 
+@import "vendor-components/bootstrap/stylesheets/_bootstrap";
 
 body {
-  font-family: $bodyFont;
+  font-family: $appFont;
   font-size: $baseFontSize;
 }
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  font-family: $headingFont;
 }
 h1 {
   font-size: $h1Size;
@@ -29,9 +29,6 @@ h3 {
 }
 h4 {
   font-size: $h4Size;
-}
-a {
-  color: $linkBlue;
 }
 a:hover {
   text-decoration: none;

@@ -28,7 +28,7 @@ layout: compress
       </div>
     </noscript>
     <!--Custom No Script Tag for Javascript Disabled-->
-    
+
     <!-- [app loader] -->
     {% include app-loader/index.html %}
     <!-- [app loader] -->
@@ -41,34 +41,27 @@ layout: compress
       <!-- [main content] -->
       <main>{{ content }}</main>
       <!-- [main content] -->
-      
+
       <!-- [app footer partial]-->
       <footer>{% include app-footer/index.html %}</footer>
       <!-- [app footer partial]-->
     </div>
 
-    <!-- [app fonts config] -->
-    {% include app-webfonts/index.html %}
-    <!-- [app fonts config] -->
-    
     <!-- [js file timestamp] -->
-    <script type="text/javascript">
-      var serveFileVer = "?serveFileVer=20032022_1722";
-    </script>
-    {% assign serveFileVer = "20032022_1722" %}
+    {% assign serveFileVer = "30082022_1603" %}
     <!-- [js file timestamp] -->
 
     <!-- [javascript files] -->
-    {% assign mode = "development" %}
+    {% assign mode = "production" %}
     {% if mode == "development" and page.jsfile != "" %}
-      <script src="/assets/js/vendor-components/jquery/jquery-3.3.1.min.js?serveFileVer={{ serveFileVer }}" type="text/javascript"></script>
-      <script src="/assets/js/vendor-components/jquery/jquery.cookie.js?serveFileVer={{ serveFileVer }}" type="text/javascript"></script>
-      <script src="/assets/js/vendor-components/bootstrap/bootstrap.min.js?serveFileVer={{ serveFileVer }}" type="text/javascript"></script>
-      <script src="/assets/js/common.js?serveFileVer={{ serveFileVer }}" type="text/javascript"></script>
-      <script src="/assets/js/{{ page.jsfile }}.js?serveFileVer={{ serveFileVer }}" type="text/javascript"></script>
+      <script src="/assets/js/vendor-components/jquery/jquery-3.3.1.min.js" type="text/javascript"></script>
+      <script src="/assets/js/vendor-components/jquery/jquery.cookie.js" type="text/javascript"></script>
+      <script src="/assets/js/vendor-components/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+      <script src="/assets/js/common.js" type="text/javascript"></script>
+      <script src="/assets/js/{{ page.jsfile }}.js" type="text/javascript"></script>
     {% endif %}
     {% if mode == "production" and page.jsfile != "" %}
-      <script src="/assets/js/{{ page.jsfile}}.min.js?serveFileVer={{ serveFileVer }}" type="text/javascript"></script>
+      <script src="/assets/js/{{ page.jsfile}}.min.js" type="text/javascript"></script>
     {% endif %}
     <!-- [javascript files] -->
   </body>
